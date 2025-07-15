@@ -1,0 +1,57 @@
+
+      <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DevLinks</title>
+<link rel="stylesheet" href="./style.css">
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+<div id="container">
+  <div id="profile">
+    <img src="./Avatar.png" alt="Foto de perfil">
+    <p>@Vibeswithevellyn</p>
+
+    <!-- Label certo -->
+    <label for="toggle-theme" class="switch">
+      <input type="checkbox" id="toggle-theme">
+      <span class="slider">
+        <span class="icon">🌙</span>
+      </span>
+    </label>
+  </div>
+
+  <ul>
+    <li><a href="#">Veja meu currículo</a></li>
+    <li><a href="./historia.html" target="_blank">Conheça minha história</a></li>
+    <li><a href="./Clique para baixar o arquivo certificados (1).html">Certificados</a></li>
+    <li><a href="#">Projetos</a></li>
+  </ul>
+
+  <div id="social-links">
+    <a href="https://github.com/evejeto" target="_blank"><ion-icon name="logo-github"></ion-icon></a>
+    <a href="https://www.instagram.com/vibeswithevellyn/" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a>
+    <a href="https://youtube.com/@seu-canal" target="_blank"><ion-icon name="logo-youtube"></ion-icon></a>
+    <a href="https://linkedin.com/in/seu-usuario" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a>
+  </div>
+</div>
+
+<script>
+const toggle = document.getElementById("toggle-theme");
+const icon = document.querySelector(".slider .icon");
+
+toggle.addEventListener("change", () => {
+  document.body.classList.toggle("light-mode");
+  if (document.body.classList.contains("light-mode")) {
+    icon.textContent = "☀️";
+  } else {
+    icon.textContent = "🌙";
+  }
+});
+</script>
+</body>
+</html>
